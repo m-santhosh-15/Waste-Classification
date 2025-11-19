@@ -1,3 +1,7 @@
+import os
+os.environ["STREAMLIT_SERVER_PORT"] = os.environ.get("PORT", "8501")
+os.environ["STREAMLIT_SERVER_ADDRESS"] = "0.0.0.0"
+
 import streamlit as st
 import tensorflow as tf
 import numpy as np

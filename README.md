@@ -9,8 +9,7 @@ Required Python (3.x recommended)
 Open your terminal or command prompt and clone the project repository:
 
 ```
-git clone <>
-cd waste-classification-system
+git clone https://github.com/m-santhosh-15/Waste-Classification.git
 ```
 
 ### 2. Install Dependencies

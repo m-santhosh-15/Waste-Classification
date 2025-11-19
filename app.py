@@ -1,7 +1,3 @@
-import os
-os.environ["STREAMLIT_SERVER_PORT"] = os.environ.get("PORT", "8501")
-os.environ["STREAMLIT_SERVER_ADDRESS"] = "0.0.0.0"
-
 import streamlit as st
 import tensorflow as tf
 import numpy as np
@@ -11,6 +7,8 @@ st.title("♻️ Waste Classification System")
 st.write("Upload an image and the model will classify the waste category.")
 
 model = tf.keras.models.load_model("model/waste_model.h5")
+model_path= tf.keras.models.load_model(model, compile=False)
+
 
 with open("labels.txt") as f:
     classes = f.read().splitlines()
